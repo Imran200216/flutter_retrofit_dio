@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_retrofit_dio/common/widgets/app_spacer.dart';
 import 'package:flutter_retrofit_dio/config/app_constants.dart';
 import 'package:flutter_retrofit_dio/features/auth/presentation/widgets/custom_filled_btn.dart';
 import 'package:flutter_retrofit_dio/features/auth/presentation/widgets/custom_input_field.dart';
@@ -33,7 +34,7 @@ class _AuthForgetPasswordScreenState extends State<AuthForgetPasswordScreen> {
             children: [
               // auth forget password
               Text(
-               AppConstants.forgetPasswordText,
+                AppConstants.forgetPasswordText,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
@@ -54,9 +55,12 @@ class _AuthForgetPasswordScreenState extends State<AuthForgetPasswordScreen> {
               const Spacer(flex: 1),
 
               // Forget password sent link btn
-              CustomFilledBtn(text: AppConstants.sentLinkText, onPressed: () {}),
+              CustomFilledBtn(
+                text: AppConstants.sentLinkText,
+                onPressed: () {},
+              ),
 
-              const SizedBox(height: 12),
+              AppVerticalSpacer(12),
 
               // back to login text btn
               CustomTextBtn(

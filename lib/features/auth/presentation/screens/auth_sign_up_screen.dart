@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_retrofit_dio/common/widgets/app_spacer.dart';
 import 'package:flutter_retrofit_dio/config/app_constants.dart';
 import 'package:flutter_retrofit_dio/config/route_constants.dart';
 import 'package:flutter_retrofit_dio/core/utils/app_validators.dart';
@@ -65,7 +66,7 @@ class _AuthSignUpScreenState extends State<AuthSignUpScreen> {
                   keyboardType: TextInputType.emailAddress,
                 ),
 
-                const SizedBox(height: 15),
+                AppVerticalSpacer(12),
 
                 // Email Address
                 CustomInputField(
@@ -76,7 +77,7 @@ class _AuthSignUpScreenState extends State<AuthSignUpScreen> {
                   keyboardType: TextInputType.emailAddress,
                 ),
 
-                const SizedBox(height: 15),
+                AppVerticalSpacer(12),
 
                 // Password
                 CustomInputField(
@@ -96,7 +97,7 @@ class _AuthSignUpScreenState extends State<AuthSignUpScreen> {
                   onPressed: () {},
                 ),
 
-                const SizedBox(height: 12),
+                AppVerticalSpacer(12),
 
                 Text(
                   AppConstants.orText,
@@ -107,7 +108,7 @@ class _AuthSignUpScreenState extends State<AuthSignUpScreen> {
                   ),
                 ),
 
-                const SizedBox(height: 12),
+                AppVerticalSpacer(12),
 
                 // Sign in with google btn
                 CustomOutlinedBtn(
