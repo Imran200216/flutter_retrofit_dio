@@ -1,4 +1,7 @@
 class RouteConstants {
+  // Splash
+  static const String splash = 'splash';
+
   // Auth Login
   static const String authLogin = 'authLogin';
   // Auth Sign Up
@@ -8,4 +11,10 @@ class RouteConstants {
 
   // Home
   static const String home = "home";
+
+  // Recipe
+  static const String recipe = "recipe";
+
+  // Recipe Description
+  static const String recipeDescription = "recipeDescription";
 }

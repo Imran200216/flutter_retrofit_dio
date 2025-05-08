@@ -22,9 +22,10 @@ Map<String, dynamic> _$TodoModelToJson(TodoModel instance) => <String, dynamic>{
 
 TodoListResponse _$TodoListResponseFromJson(Map<String, dynamic> json) =>
     TodoListResponse(
-      todos: (json['todos'] as List<dynamic>)
-          .map((e) => TodoModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      todos:
+          (json['todos'] as List<dynamic>)
+              .map((e) => TodoModel.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
 
 Map<String, dynamic> _$TodoListResponseToJson(TodoListResponse instance) =>

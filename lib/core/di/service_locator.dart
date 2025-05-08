@@ -5,6 +5,11 @@ import 'package:flutter_retrofit_dio/features/home/data/repository/todo_reposito
 import 'package:flutter_retrofit_dio/features/home/domain/repository/todo_repository.dart';
 import 'package:flutter_retrofit_dio/features/home/domain/usecases/fetch_todos.dart';
 import 'package:flutter_retrofit_dio/features/home/presentation/blocs/todo_bloc.dart';
+import 'package:flutter_retrofit_dio/features/recipes/data/datasources/recipe_remote_data_source.dart';
+import 'package:flutter_retrofit_dio/features/recipes/data/repository/recipe_repository_impl.dart';
+import 'package:flutter_retrofit_dio/features/recipes/domain/repository/recipe_repository.dart';
+import 'package:flutter_retrofit_dio/features/recipes/domain/usecases/fetch_recipe.dart';
+import 'package:flutter_retrofit_dio/features/recipes/presentation/bloc/recipe_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;
@@ -17,17 +22,27 @@ Future<void> init() async {
   // API Client
   sl.registerLazySingleton(() => ApiClient(sl()));
 
-  // Use Cases
+  // Todo Use Cases
   sl.registerLazySingleton(() => FetchTodos(sl()));
 
-  // Data Source
+  // Todo Data Source
   sl.registerLazySingleton<TodoRemoteDataSource>(
     () => TodoRemoteDataSourceImpl(sl()),
   );
 
-  // Repository
+  // Todo Repository
   sl.registerLazySingleton<TodoRepository>(() => TodoRepositoryImpl(sl()));
 
-  // Blocs
+  // Todo Blocs
   sl.registerFactory(() => TodoBloc(sl()));
+
+  sl.registerLazySingleton<RecipeRemoteDataSource>(
+    () => RecipeRemoteDataSourceImpl(sl()),
+  );
+
+  sl.registerLazySingleton<RecipeRepository>(() => RecipeRepositoryImpl(sl()));
+
+  sl.registerLazySingleton(() => FetchRecipe(sl()));
+
+  sl.registerFactory(() => RecipeBloc(sl()));
 }

@@ -1,4 +1,7 @@
 class AppConstants {
+  // Splash
+  static const String splashText = "Splash";
+
   // Login
   static const String loginText = "Login In";
 
@@ -33,4 +36,9 @@ class AppConstants {
   // Sent Link
   static const String sentLinkText = "Sent Link";
   static const String backToLoginText = "Back To Login";
+
+  // Recipe Home
+  static const String recipeTitle = "What would you like\nto cook?";
+  static const String searchRecipeHintText =
+      "Enter the recipe you want to search";
 }

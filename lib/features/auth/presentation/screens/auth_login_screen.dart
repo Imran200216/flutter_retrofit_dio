@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_retrofit_dio/common/widgets/app_spacer.dart';
-import 'package:flutter_retrofit_dio/config/app_constants.dart';
+import 'package:flutter_retrofit_dio/core/constants/app_constants.dart';
 import 'package:flutter_retrofit_dio/config/route_constants.dart';
 import 'package:flutter_retrofit_dio/core/utils/app_validators.dart';
 import 'package:flutter_retrofit_dio/features/auth/presentation/widgets/custom-outlined_btn.dart';

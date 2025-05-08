@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_retrofit_dio/common/widgets/app_spacer.dart';
-import 'package:flutter_retrofit_dio/config/app_constants.dart';
+import 'package:flutter_retrofit_dio/core/constants/app_constants.dart';
 import 'package:flutter_retrofit_dio/features/auth/presentation/widgets/custom_filled_btn.dart';
 import 'package:flutter_retrofit_dio/features/auth/presentation/widgets/custom_input_field.dart';
 import 'package:flutter_retrofit_dio/features/auth/presentation/widgets/custom_text_btn.dart';

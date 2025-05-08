@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_retrofit_dio/core/di/service_locator.dart';
 import 'package:flutter_retrofit_dio/core/router/app_router.dart';
 import 'package:flutter_retrofit_dio/features/home/presentation/blocs/todo_bloc.dart';
+import 'package:flutter_retrofit_dio/features/recipes/presentation/bloc/recipe_bloc.dart';
 
 void main() async {
   // dependency injection
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget {
       providers: [
         // Todo Bloc
         BlocProvider(create: (context) => sl<TodoBloc>()),
+
+        // Recipe Bloc 
+        BlocProvider(create: (context) => sl<RecipeBloc>(),),
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
